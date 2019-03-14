@@ -1,0 +1,303 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Sequence" mva:VisualBasic.Settings="{x:Null}"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:p="http://schemas.uipath.com/workflow/activities/cv"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing"
+ xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'IHWindowClass'" Server="https://cv.uipath.com/">
+      <p:CVScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do">
+            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(407, 182, 439, 191)]" DesignTarget="[Rectangle.FromLTRB(464, 172, 697, 198)]" DisplayName="CV Type Into relative to Find CV Text - 'Name'">
+              <ui:AnchorContextAware.AnchorProvider>
+                <ActivityAction x:TypeArguments="ui:Anchor2Data">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
+                  </ActivityAction.Argument>
+                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="407, 182, 32, 9" DisplayName="Find CV Text - 'Name'" FuzzySearch="True" InformativeScreenshot="eb447a6e095f18360a13d11ff73fca70" TargetType="Text" Text="Name" TimeoutMS="30000" sap2010:WorkflowViewState.IdRef="FindCVText_1" />
+                </ActivityAction>
+              </ui:AnchorContextAware.AnchorProvider>
+              <ui:AnchorContextAware.TargetProvider>
+                <ActivityAction x:TypeArguments="ui:Anchor2Data">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
+                  </ActivityAction.Argument>
+                  <p:CVTypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" Activate="True" ClickBeforeTyping="True" DesignTimeRectangle="464, 172, 233, 26" DisplayName="CV Type Into - InputBox" EmptyField="False" InformativeScreenshot="7f9fe63f806d217ef14190c45a79044a" SendWindowMessages="False" SimulateType="False" TargetType="InputBox" Text="test company" TimeoutMS="30000">
+                    <p:CVTypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                    </p:CVTypeInto.Target>
+                    <sap2010:WorkflowViewState.IdRef>CVTypeInto_1</sap2010:WorkflowViewState.IdRef>
+                  </p:CVTypeInto>
+                </ActivityAction>
+              </ui:AnchorContextAware.TargetProvider>
+              <sap2010:WorkflowViewState.IdRef>AnchorContextAware_1</sap2010:WorkflowViewState.IdRef>
+            </ui:AnchorContextAware>
+          </Sequence>
+        </ActivityAction>
+      </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache InformativeScreenshot="9fa7c33c97136c8049d7c4dc4bf754f8" OcrText="USER=admin&#xD;&#xA;Address Purchasing IP=IocaIhost&#xD;&#xA;Order Shipping DB=data/bsdb.db VER-4.1.5 DBTYPE=sqIite&#xD;&#xA;Finance Inventory Engineering Ouality Custom HR Admin Help&#xD;&#xA;Main ShipTo Contact&#xD;&#xA;Customer Master Maintenance&#xD;&#xA;CustCode 200020&#xD;&#xA;Name&#xD;&#xA;State&#xD;&#xA;Country USA&#xD;&#xA;Remarks DateAdded&#xD;&#xA;Group&#xD;&#xA;Carrier&#xD;&#xA;Price Code&#xD;&#xA;SalesRep&#xD;&#xA;AR Account&#xD;&#xA;CostCenter&#xD;&#xA;Currency&#xD;&#xA;Label Format&#xD;&#xA;Shp Format uses&#xD;&#xA;20000000&#xD;&#xA;1300&#xD;&#xA;uso&#xD;&#xA;generic LastMod&#xD;&#xA;CreditLimit&#xD;&#xA;Terms&#xD;&#xA;Freight Type&#xD;&#xA;Disc Code&#xD;&#xA;Tax Code&#xD;&#xA;Inu Format PICKUP&#xD;&#xA;Ü on Hold&#xD;&#xA;Ü Create Shipto Same as Billto ENG 11:23 AM&#xD;&#xA;INTL 2/18/2019" Position="2186, 47" ScaleFactor="1" ScreenshotGuid="e377ad83-9123-44d5-9aa2-c42ef75ffd9a" ServerVersion="1">
+          <uc:CVCache.CvUiElements>
+            <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="128">
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="1174, 522, 47, 26" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="841, 283, 131, 25" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="841, 173, 129, 25" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="1054, 173, 167, 25" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="840, 488, 131, 25" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="1053, 324, 169, 25" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="607, 132, 50, 26" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="1119, 522, 47, 25" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="1054, 422, 166, 25" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="465, 414, 234, 24" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="1054, 132, 166, 26" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="1053, 213, 168, 25" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="841, 133, 126, 25" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="465, 348, 234, 24" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="841, 244, 130, 25" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="465, 381, 169, 26" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="465, 133, 96, 24" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="841, 389, 130, 24" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="1052, 290, 168, 24" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="840, 357, 130, 24" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="839, 325, 131, 23" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="674, 26, 70, 29" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="391, 64, 42, 25" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="705, 173, 29, 26" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="841, 422, 129, 24" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="840, 212, 131, 23" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="1054, 252, 167, 23" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="464, 172, 233, 26" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="432, 64, 55, 25" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="1015, 522, 62, 25" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="463, 213, 232, 25" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="1203, 254, 18, 22" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="840, 455, 131, 24" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="465, 281, 231, 25" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="109, 960, 27, 25" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="465, 247, 231, 25" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="1203, 291, 19, 22" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="13, 962, 23, 21" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="1054, 357, 166, 24" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="463, 315, 234, 25" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="1203, 358, 18, 23" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="467, 504, 17, 17" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="642, 380, 30, 26" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="569, 132, 29, 26" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1612, 961, 27, 28" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="62, 960, 26, 26" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="487, 64, 59, 24" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="952, 213, 18, 22" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="207, 958, 29, 28" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1, 2, 19, 19" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="682, 349, 18, 22" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="158, 959, 28, 27" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="666, 504, 17, 17" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="952, 325, 18, 22" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="953, 423, 17, 22" Score="1" />
+              <uc:CvElementInfo Category="MaximizeButton" Confidence="DesignTime" Region="1574, 0, 19, 19" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="682, 415, 18, 22" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="466, 447, 221, 65" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="952, 358, 18, 22" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1480, 964, 21, 19" Score="1" />
+              <uc:CvElementInfo Category="CheckBox" Confidence="DesignTime" Region="1053, 393, 16, 16" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="952, 390, 18, 22" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="711, 177, 18, 17" Score="1" />
+              <uc:CvElementInfo Category="MinimizeButton" Confidence="DesignTime" Region="1529, 3, 19, 15" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="952, 456, 17, 22" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1458, 966, 19, 18" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="622, 29, 21, 21" Score="1" />
+              <uc:CvElementInfo Category="CheckBox" Confidence="DesignTime" Region="828, 527, 16, 16" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="683, 487, 17, 18" Score="1" />
+              <uc:CvElementInfo Category="CloseButton" Confidence="DesignTime" Region="1621, 2, 17, 16" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="683, 448, 18, 18" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="573, 135, 21, 19" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1436, 967, 17, 15" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="650, 29, 20, 20" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="646, 384, 20, 18" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="651, 29, 21, 20" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="199, 954, 46, 36" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="194, 2, 117, 19" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1621, 2, 17, 16" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="621, 29, 21, 20" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1436, 966, 17, 15" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="156, 957, 33, 31" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1621, 2, 18, 17" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="109, 1, 78, 19" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1, 2, 18, 19" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="61, 959, 27, 27" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="656, 503, 14, 19" Score="1" />
+            </scg:List>
+          </uc:CVCache.CvUiElements>
+          <uc:CVCache.OcrTexts>
+            <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="128">
+              <uc:OcrTextInfo Region="24, 7, 67, 9" Text="USER=admin" />
+              <uc:OcrTextInfo Region="10, 35, 45, 9" Text="Address" />
+              <uc:OcrTextInfo Region="66, 35, 61, 11" Text="Purchasing" />
+              <uc:OcrTextInfo Region="117, 7, 65, 9" Text="IP=IocaIhost" />
+              <uc:OcrTextInfo Region="137, 35, 30, 9" Text="Order" />
+              <uc:OcrTextInfo Region="176, 35, 47, 11" Text="Shipping" />
+              <uc:OcrTextInfo Region="207, 7, 92, 10" Text="DB=data/bsdb.db" />
+              <uc:OcrTextInfo Region="324, 7, 52, 9" Text="VER-4.1.5" />
+              <uc:OcrTextInfo Region="401, 7, 76, 12" Text="DBTYPE=sqIite" />
+              <uc:OcrTextInfo Region="233, 35, 42, 9" Text="Finance" />
+              <uc:OcrTextInfo Region="286, 35, 47, 11" Text="Inventory" />
+              <uc:OcrTextInfo Region="343, 35, 65, 11" Text="Engineering" />
+              <uc:OcrTextInfo Region="418, 35, 36, 11" Text="Ouality" />
+              <uc:OcrTextInfo Region="463, 35, 42, 9" Text="Custom" />
+              <uc:OcrTextInfo Region="516, 35, 17, 9" Text="HR" />
+              <uc:OcrTextInfo Region="542, 35, 34, 9" Text="Admin" />
+              <uc:OcrTextInfo Region="586, 35, 24, 11" Text="Help" />
+              <uc:OcrTextInfo Region="399, 72, 24, 9" Text="Main" />
+              <uc:OcrTextInfo Region="441, 72, 37, 11" Text="ShipTo" />
+              <uc:OcrTextInfo Region="495, 72, 41, 9" Text="Contact" />
+              <uc:OcrTextInfo Region="387, 96, 56, 9" Text="Customer" />
+              <uc:OcrTextInfo Region="447, 96, 39, 9" Text="Master" />
+              <uc:OcrTextInfo Region="490, 96, 72, 9" Text="Maintenance" />
+              <uc:OcrTextInfo Region="401, 142, 54, 9" Text="CustCode" />
+              <uc:OcrTextInfo Region="470, 142, 40, 9" Text="200020" />
+              <uc:OcrTextInfo Region="407, 182, 32, 9" Text="Name" />
+              <uc:OcrTextInfo Region="413, 357, 26, 9" Text="State" />
+              <uc:OcrTextInfo Region="407, 423, 41, 11" Text="Country" />
+              <uc:OcrTextInfo Region="471, 423, 23, 9" Text="USA" />
+              <uc:OcrTextInfo Region="407, 450, 49, 9" Text="Remarks" />
+              <uc:OcrTextInfo Region="771, 142, 60, 9" Text="DateAdded" />
+              <uc:OcrTextInfo Region="798, 182, 33, 11" Text="Group" />
+              <uc:OcrTextInfo Region="794, 221, 37, 9" Text="Carrier" />
+              <uc:OcrTextInfo Region="771, 254, 26, 9" Text="Price" />
+              <uc:OcrTextInfo Region="802, 254, 28, 9" Text="Code" />
+              <uc:OcrTextInfo Region="777, 292, 54, 11" Text="SalesRep" />
+              <uc:OcrTextInfo Region="769, 333, 16, 9" Text="AR" />
+              <uc:OcrTextInfo Region="788, 333, 43, 9" Text="Account" />
+              <uc:OcrTextInfo Region="769, 366, 62, 9" Text="CostCenter" />
+              <uc:OcrTextInfo Region="783, 431, 48, 11" Text="Currency" />
+              <uc:OcrTextInfo Region="759, 464, 29, 9" Text="Label" />
+              <uc:OcrTextInfo Region="793, 464, 38, 9" Text="Format" />
+              <uc:OcrTextInfo Region="768, 497, 21, 11" Text="Shp" />
+              <uc:OcrTextInfo Region="793, 497, 38, 9" Text="Format" />
+              <uc:OcrTextInfo Region="845, 221, 31, 9" Text="uses" />
+              <uc:OcrTextInfo Region="844, 333, 55, 9" Text="20000000" />
+              <uc:OcrTextInfo Region="845, 366, 26, 9" Text="1300" />
+              <uc:OcrTextInfo Region="845, 431, 24, 9" Text="uso" />
+              <uc:OcrTextInfo Region="845, 464, 40, 11" Text="generic" />
+              <uc:OcrTextInfo Region="991, 142, 46, 9" Text="LastMod" />
+              <uc:OcrTextInfo Region="978, 222, 59, 9" Text="CreditLimit" />
+              <uc:OcrTextInfo Region="1001, 261, 35, 9" Text="Terms" />
+              <uc:OcrTextInfo Region="971, 299, 37, 11" Text="Freight" />
+              <uc:OcrTextInfo Region="1011, 299, 25, 11" Text="Type" />
+              <uc:OcrTextInfo Region="980, 333, 24, 9" Text="Disc" />
+              <uc:OcrTextInfo Region="1008, 333, 28, 9" Text="Code" />
+              <uc:OcrTextInfo Region="985, 366, 19, 9" Text="Tax" />
+              <uc:OcrTextInfo Region="1008, 366, 28, 9" Text="Code" />
+              <uc:OcrTextInfo Region="981, 431, 14, 9" Text="Inu" />
+              <uc:OcrTextInfo Region="999, 431, 38, 9" Text="Format" />
+              <uc:OcrTextInfo Region="1057, 299, 43, 9" Text="PICKUP" />
+              <uc:OcrTextInfo Region="1051, 395, 14, 14" Text="Ü" />
+              <uc:OcrTextInfo Region="1072, 398, 14, 9" Text="on" />
+              <uc:OcrTextInfo Region="1091, 398, 25, 9" Text="Hold" />
+              <uc:OcrTextInfo Region="828, 528, 14, 14" Text="Ü" />
+              <uc:OcrTextInfo Region="849, 531, 35, 9" Text="Create" />
+              <uc:OcrTextInfo Region="889, 531, 33, 11" Text="Shipto" />
+              <uc:OcrTextInfo Region="927, 531, 31, 9" Text="Same" />
+              <uc:OcrTextInfo Region="963, 533, 12, 7" Text="as" />
+              <uc:OcrTextInfo Region="980, 531, 25, 9" Text="Billto" />
+              <uc:OcrTextInfo Region="1508, 960, 22, 9" Text="ENG" />
+              <uc:OcrTextInfo Region="1545, 959, 26, 9" Text="11:23" />
+              <uc:OcrTextInfo Region="1574, 959, 19, 9" Text="AM" />
+              <uc:OcrTextInfo Region="1507, 977, 24, 9" Text="INTL" />
+              <uc:OcrTextInfo Region="1543, 977, 52, 10" Text="2/18/2019" />
+            </scg:List>
+          </uc:CVCache.OcrTexts>
+        </uc:CVCache>
+      </p:CVScope.DesignTimeCache>
+      <p:CVScope.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <ui:MicrosoftOCR FilterRegion="{x:Null}" Text="{x:Null}" ExtractWords="True" Image="[Image]" Language="en" Profile="Screen" Scale="1" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_1" />
+        </ActivityFunc>
+      </p:CVScope.OCREngine>
+      <p:CVScope.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="756c1b9af30d8046aa90074220170a55" Selector="&lt;wnd app='rdcman.exe' cls='WindowsForms10.Window.*' title='Windows10 - x86 (ROQAW10x86APP19.deskover.local) - Remote Deskto*' /&gt;&lt;wnd cls='IHWindowClass' idx='6' title='Input Capture Window' /&gt;" WaitForReady="INTERACTIVE" />
+      </p:CVScope.Target>
+      <sap2010:WorkflowViewState.IdRef>CVScope_1</sap2010:WorkflowViewState.IdRef>
+    </p:CVScope>
+    <sap2010:WorkflowViewState.IdRef>Sequence_1</sap2010:WorkflowViewState.IdRef>
+    <sads:DebugSymbol.Symbol>dz1DOlxVc2Vyc1xhbGV4YW5kcnUucm9tYW5cRG9jdW1lbnRzXFVpUGF0aFxydW5DVlxTZXF1ZW5jZS54YW1sFDwDnAIOAgEBPQWZAhECAQKWApgBlgLmAgIBFT1yPYoBAgEUPTc9PAIBE5ICC5ICxAECAQ5DC1wWAgEDkgKNAZICkAECARKSAl6SAmcCARCSAnGSAnUCAQ9EDVslAgEERDFEWwIBDURpRJMBAgEMShNKwAMCAQhSE1ciAgEFSocDSo4DAgELSvYCSvwCAgEKSp8CSqUCAgEJUukDUvADAgEHUtADUt4DAgEG</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.IdRef>Sequence_2</sap2010:WorkflowViewState.IdRef>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="FindCVText_1" sap:VirtualizedContainerService.HintSize="314,129" />
+      <sap2010:ViewStateData Id="CVTypeInto_1" sap:VirtualizedContainerService.HintSize="314,129" />
+      <sap2010:ViewStateData Id="AnchorContextAware_1" sap:VirtualizedContainerService.HintSize="666,221" />
+      <sap2010:ViewStateData Id="MicrosoftOCR_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="CVScope_1" sap:VirtualizedContainerService.HintSize="680,499" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="702,623">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="742,703" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
